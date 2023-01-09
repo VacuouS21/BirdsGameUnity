@@ -91,13 +91,14 @@ public class SpawnerControler : MonoBehaviour
         randomNumber.Enqueue(firstTrueNumber + "x" + secondTrueNumber);
 
         numberTrue = firstTrueNumber * secondTrueNumber;
-        while (numberTrue == numberFalseFirst)
+
+        while (numberTrue == numberFalseFirst || numberFalseFirst==0)
         {
-            numberFalseFirst = UnityEngine.Random.Range(secondTrueNumber * 2, maxIntRand * minIntRand + 1);
+            numberFalseFirst = UnityEngine.Random.Range(numberTrue / 2, numberTrue + 10);
         }
-        while (numberTrue == numberFalseSecond || numberFalseFirst==numberFalseSecond)
+        while (numberTrue == numberFalseSecond || numberFalseFirst==numberFalseSecond || numberFalseSecond==0)
         {
-            numberFalseSecond = UnityEngine.Random.Range(secondTrueNumber * 2, maxIntRand * minIntRand + 1);
+            numberFalseSecond = UnityEngine.Random.Range(numberTrue/2, numberTrue+10);
         }
     }
 }
