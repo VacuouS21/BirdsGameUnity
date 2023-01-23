@@ -20,7 +20,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu/Boss.unity
     guid: acd6cdc822e5fe94e849c97dc78b3f57
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/FirstGame/Runner.unity
     guid: b2a090b0d8ee41b4bb5dcd5bbc23187f
+  - enabled: 1
+    path: Assets/Scenes/Levels/Light.unity
+    guid: f1d9dc261586bd34f82bd01266dedb75
+  - enabled: 1
+    path: Assets/Scenes/Levels/Medium.unity
+    guid: 16a494f4b722f074481a90a9ec905f0a
+  - enabled: 1
+    path: Assets/Scenes/Levels/Hard.unity
+    guid: 9577aeed5cf564947ab818bfa11d65de
   m_configObjects: {}

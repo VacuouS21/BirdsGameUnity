@@ -502,7 +502,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1440141896}
         m_TargetAssemblyTypeName: RegisterMenu, Assembly-CSharp
-        m_MethodName: goToTheMainMenu
+        m_MethodName: buttonOkError
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1337,6 +1337,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputName: {fileID: 1423065867}
   inputPassword: {fileID: 1924739894}
+  error: {fileID: 1615657970}
+  textError: {fileID: 2079176466}
 --- !u!1 &1444686455
 GameObject:
   m_ObjectHideFlags: 0

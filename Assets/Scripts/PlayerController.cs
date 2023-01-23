@@ -32,7 +32,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+        if (health <= 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
 
         if (time > 0f)
         {
@@ -68,6 +72,46 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-   
+
+    public void UpButton()
+    {
+
+        if (transform.position.y < maxHeight && time <= 0)
+        {
+            time = 0.15f;
+            targetPos = new Vector2(transform.position.x, transform.position.y + Yincrement);
+        }
+
     }
+    public void DownButton()
+    {
+
+        if (transform.position.y > minHeight && time <= 0)
+        {
+            time = 0.15f;
+            targetPos = new Vector2(transform.position.x, transform.position.y - Yincrement);
+        }
+
+    }
+    public void RightButton()
+    {
+
+        if (transform.position.x < maxX && time <= 0)
+        {
+            time = 0.15f;
+            targetPos = new Vector2(transform.position.x + Xincrement, transform.position.y);
+        }
+
+    }
+    public void LeftButton()
+    {
+        if (transform.position.x > minX && time <= 0)
+        {
+            time = 0.15f;
+            targetPos = new Vector2(transform.position.x - Xincrement, transform.position.y);
+        }
+
+    }
+
+}
         

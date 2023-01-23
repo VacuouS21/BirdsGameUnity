@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,6 +9,7 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused=false;
     public GameObject pauseMenuUI;
+    public GameObject player;
     // Start is called before the first frame update
     private GearController[] startNow;
     private float mySpeed;
@@ -40,16 +42,24 @@ public class PauseMenu : MonoBehaviour
         }
 
         foreach (var sn in startNow)
-            sn.speed=0;
+        {
+            sn.speed = 0;
+            sn.gameObject.SetActive(false);
+        }
+        player.SetActive(false);  
         GameIsPaused = true;
     }
 
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
-        startNow = FindObjectsOfType<GearController>();
+        //startNow = FindObjectsOfType<GearController>();
         foreach (var sn in startNow)
+        {
             sn.speed = mySpeed;
+            sn.gameObject.SetActive(true);
+        }
+        player.SetActive(true);
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
