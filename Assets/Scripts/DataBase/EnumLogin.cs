@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-enum EnumLogin 
+public enum EnumLogin 
 {
-  NOTFOUND,
-  WRONGPASSWORD,
-  TRUEPERSON
+  ERROR_CONNECTION,
+  NOT_FOUND,
+  WRONG_PASSWORD,
+  TRUE_PERSON
 }

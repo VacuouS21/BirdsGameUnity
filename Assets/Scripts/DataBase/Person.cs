@@ -15,4 +15,15 @@ public class Person
     public bool bossLevel;
     public int bossMax;
     public long teacher;
+    public Person(string username, string password, int infoEase, int infoMedium, int infoHard, bool bossLevel, int bossMax, long teacher)
+    {
+        this.username = username;    
+        this.password = password;
+        this.infoEasy= infoEase;
+        this.infoHard= infoHard ;
+        this.infoMedium= infoMedium;
+        this.bossMax= bossMax ;
+        this.bossLevel = bossLevel;
+        this.teacher = teacher;
+    }
 }
